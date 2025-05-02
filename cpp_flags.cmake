@@ -1,6 +1,6 @@
 function(SetCppStandards cpp_minimum default_extensions)
     if (DEFINED CMAKE_CXX_STANDARD)
-        if (CMAKE_CXX_STANDARD NOT EQUAL ${cpp_minimum})
+        if (NOT CMAKE_CXX_STANDARD EQUAL ${cpp_minimum})
             if (CMAKE_CXX_STANDARD EQUAL 98 OR CMAKE_CXX_STANDARD LESS ${cpp_minimum})
                 message (FATAL_ERROR "This project requires at least C++ ${cpp_minimum}")
             endif ()
