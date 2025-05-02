@@ -14,8 +14,11 @@ enable_testing()
 include(integration.cmake)
 include(cpp_flags.cmake)
 include(gcc_sanitizers.cmake)
+include(install.cmake)
 
 add_subdirectory(lib)
 add_subdirectory(exe)
 
 add_test(NAME TestCppExe COMMAND cpp_test_exe)
+
+CreateUninstaller()
